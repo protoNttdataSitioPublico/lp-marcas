@@ -1,0 +1,1967 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "TelefonicaWeb-Bold";
+  src: url("./fonts/TelefonicaWeb-Bold.eot");
+  src: url("./fonts/TelefonicaWeb-Bold.eot?iefix") format("eot"), url("./fonts/TelefonicaWeb-Bold.woff") format("woff"), url("./fonts/TelefonicaWeb-Bold.ttf") format("truetype"), url("./fonts/TelefonicaWeb-Bold.svg#webfontZhAFkZ39") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TelefonicaWeb-Regular";
+  src: url("./fonts/TelefonicaWeb-Regular.eot");
+  src: url("./fonts/TelefonicaWeb-Regular.eot?iefix") format("eot"), url("./fonts/TelefonicaWeb-Regular.woff") format("woff"), url("./fonts/TelefonicaWeb-Regular.ttf") format("truetype"), url("./fonts/TelefonicaWeb-Regular.svg#webfontZhAFkZ39") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TelefonicaWeb-RegularItalic";
+  src: url("./fonts/TelefonicaWeb-RegularItalic.eot");
+  src: url("./fonts/TelefonicaWeb-RegularItalic.eot?iefix") format("eot"), url("./fonts/TelefonicaWeb-RegularItalic.woff") format("woff"), url("./fonts/TelefonicaWeb-RegularItalic.ttf") format("truetype"), url("./fonts/TelefonicaWeb-RegularItalic.svg#webfontZhAFkZ39") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TelefonicaWeb-Light";
+  src: url("./fonts/TelefonicaWeb-Light.eot");
+  src: url("./fonts/TelefonicaWeb-Light.eot?iefix") format("eot"), url("./fonts/TelefonicaWeb-Light.woff") format("woff"), url("./fonts/TelefonicaWeb-Light.ttf") format("truetype"), url("./fonts/TelefonicaWeb-Light.svg#webfontZhAFkZ39") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TelefonicaWeb-ExtraLight";
+  src: url("./fonts/TelefonicaWeb-ExtraLight.eot");
+  src: url("./fonts/TelefonicaWeb-ExtraLight.eot?iefix") format("eot"), url("./fonts/TelefonicaWeb-ExtraLight.woff") format("woff"), url("./fonts/TelefonicaWeb-ExtraLight.ttf") format("truetype"), url("./fonts/TelefonicaWeb-ExtraLight.svg#webfontZhAFkZ39") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TelefonicaWeb-Hand";
+  src: url("./fonts/TelefonicaWeb-Hand.eot");
+  src: url("./fonts/TelefonicaWeb-Hand.eot?iefix") format("eot"), url("./fonts/TelefonicaWeb-Hand.woff") format("woff"), url("./fonts/TelefonicaWeb-Hand.ttf") format("truetype"), url("./fonts/TelefonicaWeb-Hand.svg#webfontZhAFkZ39") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 50px);
+}
+
+body {
+  font-family: TelefonicaWeb-Regular;
+  font-size: 16px;
+  color: #1D1D1F;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+strong {
+  font-family: TelefonicaWeb-Bold;
+  font-weight: 800;
+}
+
+.menu-mobile {
+  position: relative;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.menu-mobile .nav-phone-scroll-mobile {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F5F5F5;
+  padding: 20px;
+}
+.menu-mobile .nav-phone-scroll-mobile a {
+  color: #019DF4;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.menu-mobile .nav-phone-scroll-mobile a .circle-scroll {
+  background: url("./img/section-header/circle-scroll-normal.webp") no-repeat center center;
+  width: 21px;
+  height: 21px;
+}
+.menu-mobile .nav-phone-scroll-mobile a label {
+  display: none;
+  margin-right: 5px;
+}
+@media (max-width: 426px) {
+  .menu-mobile .nav-phone-scroll-mobile a label {
+    font-size: 12px;
+  }
+}
+.menu-mobile .nav-phone-scroll-mobile .active .circle-scroll {
+  background: url("./img/section-header/circle-scroll-active.webp") no-repeat center center;
+  width: 21px;
+  height: 21px;
+}
+.menu-mobile .nav-phone-scroll-mobile .active label {
+  display: block;
+}
+
+.menu-mobile.active {
+  position: fixed;
+  animation: menu-mobile-animation 1s;
+}
+
+@keyframes menu-mobile-animation {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 0px;
+  }
+}
+@media (max-width: 426px) {
+  .menu-mobile {
+    display: block;
+  }
+}
+.section-header-phone {
+  background: url("./img/section-header/slider-header-1.webp") no-repeat center center;
+}
+.section-header-phone .menu {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0px 0px 0px;
+}
+.section-header-phone .menu .back-to-catalog {
+  display: flex;
+  align-items: center;
+}
+.section-header-phone .menu .back-to-catalog .icon-left-arrow {
+  background: url("./img/section-header/left-arrow.webp") no-repeat center center;
+  width: 14px;
+  height: 14px;
+}
+.section-header-phone .menu .back-to-catalog p {
+  padding-left: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+@media (max-width: 426px) {
+  .section-header-phone .menu .back-to-catalog {
+    padding: 0px 20px;
+  }
+}
+.section-header-phone .menu .nav-phone {
+  align-items: center;
+  justify-content: center;
+  background-color: #3C5261;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  margin: 20px auto;
+  width: 69%;
+}
+.section-header-phone .menu .nav-phone .logo-phone {
+  padding: 4px 16px;
+}
+.section-header-phone .menu .nav-phone ul {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.section-header-phone .menu .nav-phone ul li {
+  padding: 4px 16px;
+  cursor: pointer;
+}
+.section-header-phone .menu .nav-phone ul li a {
+  color: #fff;
+}
+.section-header-phone .menu .nav-phone-scroll {
+  position: fixed;
+  margin-right: 20px;
+  top: 30%;
+  right: 0;
+  z-index: 999;
+  transition: 0.3s ease-in-out all;
+  transform: translateX(200px);
+}
+.section-header-phone .menu .nav-phone-scroll a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: TelefonicaWeb-Light;
+  color: transparent;
+  margin: 0px 0px 20px auto;
+  padding: 5px 10px;
+  width: fit-content;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.section-header-phone .menu .nav-phone-scroll a label {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.section-header-phone .menu .nav-phone-scroll a .circle-scroll {
+  background: url("./img/section-header/circle-scroll-normal.webp") no-repeat center center;
+  width: 21px;
+  height: 21px;
+}
+.section-header-phone .menu .nav-phone-scroll a:hover {
+  background: #019DF4;
+  color: #fff;
+}
+.section-header-phone .menu .nav-phone-scroll a:hover .circle-scroll {
+  background: url("./img/section-header/circle-scroll.webp") no-repeat center center;
+  width: 21px;
+  height: 21px;
+}
+.section-header-phone .menu .nav-phone-scroll .active {
+  background: #019DF4;
+  color: #fff;
+}
+.section-header-phone .menu .nav-phone-scroll .active .circle-scroll {
+  background: url("./img/section-header/circle-scroll.webp") no-repeat center center;
+  width: 21px;
+  height: 21px;
+}
+.section-header-phone .menu .nav-phone-scroll.active {
+  transform: translateX(0px);
+}
+@media (max-width: 1024px) {
+  .section-header-phone .menu .nav-phone {
+    width: 84%;
+  }
+}
+@media (max-width: 768px) {
+  .section-header-phone .menu .nav-phone {
+    display: none;
+  }
+}
+@media (max-width: 426px) {
+  .section-header-phone .menu .nav-phone-scroll {
+    display: none;
+  }
+}
+.section-header-phone .menu .title-phone {
+  text-align: center;
+  margin: 60px auto 0;
+  color: #fff;
+}
+.section-header-phone .menu .title-phone h1 {
+  font-family: TelefonicaWeb-ExtraLight;
+  font-weight: 400;
+  font-size: 35px;
+}
+.section-header-phone .menu .title-phone h1 strong {
+  font-family: TelefonicaWeb-Regular;
+  font-weight: 400;
+}
+.section-header-phone .menu .title-phone p {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 400;
+}
+@media (max-width: 426px) {
+  .section-header-phone .menu .title-phone h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 426px) {
+  .section-header-phone .menu .title-phone {
+    padding: 0px 20px;
+  }
+}
+.section-header-phone .menu .img-phone {
+  max-width: 600px;
+  margin: 20px auto 0;
+  line-height: 0;
+}
+@media (max-width: 1024px) {
+  .section-header-phone .menu {
+    padding: 20px 20px 0px 20px;
+  }
+}
+@media (max-width: 426px) {
+  .section-header-phone .menu {
+    padding: 20px 0px 0px 0px;
+  }
+}
+
+.section-1 {
+  background: url("./img/section-1/background-section-1.webp") no-repeat center center;
+  margin: 100px 0;
+  height: 345px;
+}
+.section-1 .container-section-1 {
+  max-width: 1300px;
+  margin: auto;
+}
+.section-1 .container-section-1 .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-1 .container-section-1 .row .box-info {
+  max-width: 500px;
+  padding: 0px 20px;
+}
+.section-1 .container-section-1 .row .box-info h3 {
+  font-family: TelefonicaWeb-ExtraLight;
+  font-size: 24px;
+}
+.section-1 .container-section-1 .row .box-info h2 {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 400;
+  font-size: 46px;
+}
+.section-1 .container-section-1 .row .box-info p {
+  margin: 20px 0;
+}
+.section-1 .container-section-1 .row .box-info .button {
+  display: inline-block;
+  padding: 13px 40px;
+  background-color: #019DF4;
+  border: 0;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-family: TelefonicaWeb-Regular;
+  font-size: 16px;
+}
+.section-1 .container-section-1 .row .box-info .container-imgs-mobile {
+  display: none;
+}
+.section-1 .container-section-1 .row .box-info .container-imgs-mobile ul {
+  display: flex;
+}
+.section-1 .container-section-1 .row .box-info .container-imgs-mobile ul li {
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .section-1 .container-section-1 .row .box-info .container-imgs-mobile {
+    display: block;
+    transition: 0.9s ease-in-out all;
+    transform: translateX(-800px);
+  }
+  .section-1 .container-section-1 .row .box-info .container-imgs-mobile ul {
+    justify-content: space-evenly;
+  }
+  .section-1 .container-section-1 .row .box-info .container-imgs-mobile ul li {
+    margin: 0;
+    width: 30%;
+  }
+  .section-1 .container-section-1 .row .box-info .container-imgs-mobile.visible {
+    transform: translateX(0);
+  }
+}
+.section-1 .container-section-1 .row .box-info .container-mobile {
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+}
+.section-1 .container-section-1 .row .box-info .container-mobile.visible {
+  opacity: 1;
+}
+.section-1 .container-section-1 .row .container-imgs ul {
+  display: flex;
+}
+.section-1 .container-section-1 .row .container-imgs ul li {
+  margin-left: 20px;
+}
+.section-1 .container-section-1 .row .container-imgs ul li #img1 {
+  opacity: 0;
+  transition: 0.1s ease-in-out all;
+}
+.section-1 .container-section-1 .row .container-imgs ul li #img2 {
+  opacity: 0;
+  transition: 0.5s ease-in-out all;
+}
+.section-1 .container-section-1 .row .container-imgs ul li #img3 {
+  opacity: 0;
+  transition: 0.9s ease-in-out all;
+}
+.section-1 .container-section-1 .row .container-imgs ul li #img1.visible {
+  opacity: 1;
+}
+.section-1 .container-section-1 .row .container-imgs ul li #img2.visible {
+  opacity: 1;
+}
+.section-1 .container-section-1 .row .container-imgs ul li #img3.visible {
+  opacity: 1;
+}
+@media (max-width: 1024px) {
+  .section-1 .container-section-1 .row .box-info {
+    max-width: fit-content;
+  }
+}
+@media (max-width: 768px) {
+  .section-1 .container-section-1 .row .box-info {
+    padding: 0;
+  }
+  .section-1 .container-section-1 .row .box-info .container-mobile {
+    padding: 20px;
+  }
+}
+@media (max-width: 426px) {
+  .section-1 .container-section-1 .row .box-info h3 {
+    font-size: 16px;
+  }
+  .section-1 .container-section-1 .row .box-info h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .section-1 .container-section-1 .row .container-imgs {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-1 {
+    background-position-y: bottom;
+    height: auto;
+  }
+}
+.section-2 {
+  background: url("./img/section-2/background-section-2.webp") no-repeat center center;
+  margin: 100px 0;
+}
+.section-2 .row {
+  display: flex;
+  height: 508px;
+}
+.section-2 .row .container-imgs-phone {
+  display: flex;
+  align-items: center;
+}
+.section-2 .row .container-imgs-phone .user-img {
+  max-width: 634px;
+}
+.section-2 .row .container-imgs-phone .user-img #img1 {
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+}
+.section-2 .row .container-imgs-phone .user-img #img1.visible {
+  opacity: 1;
+}
+.section-2 .row .container-imgs-phone .phone-img {
+  max-width: 330px;
+  margin-left: -100px;
+}
+.section-2 .row .container-imgs-phone .phone-img #img2 {
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+  transform: translateY(100px);
+}
+.section-2 .row .container-imgs-phone .phone-img #img2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 1024px) {
+  .section-2 .row .container-imgs-phone .user-img {
+    max-width: 400px;
+  }
+  .section-2 .row .container-imgs-phone .phone-img {
+    max-width: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .section-2 .row .container-imgs-phone {
+    display: none;
+  }
+}
+.section-2 .row .box-info-phone {
+  margin: auto;
+}
+.section-2 .row .box-info-phone h2 {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 400;
+  font-size: 46px;
+  text-align: right;
+}
+.section-2 .row .box-info-phone h3 {
+  font-family: TelefonicaWeb-ExtraLight;
+  font-size: 24px;
+  text-align: end;
+}
+.section-2 .row .box-info-phone ul {
+  margin: 100px auto;
+}
+.section-2 .row .box-info-phone ul li {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 50px;
+}
+.section-2 .row .box-info-phone ul li .text-box-phone {
+  width: 345px;
+  margin-right: 35px;
+  text-align: end;
+}
+.section-2 .row .box-info-phone ul li .text-box-phone h3 {
+  font-family: TelefonicaWeb-Regular;
+  font-weight: 300;
+  font-size: 24px;
+}
+@media (max-width: 426px) {
+  .section-2 .row .box-info-phone ul li .text-box-phone h3 {
+    font-size: 16px;
+  }
+  .section-2 .row .box-info-phone ul li .text-box-phone p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .section-2 .row .box-info-phone ul li .text-box-phone {
+    margin-right: 20px;
+  }
+}
+.section-2 .row .box-info-phone ul li img {
+  max-width: 50px;
+}
+@media (max-width: 426px) {
+  .section-2 .row .box-info-phone ul li img {
+    max-width: 40px;
+  }
+}
+@media (max-width: 1024px) {
+  .section-2 .row .box-info-phone ul li {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .section-2 .row .box-info-phone ul li {
+    margin-bottom: 50px;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 426px) {
+  .section-2 .row .box-info-phone ul li {
+    margin-bottom: 30px;
+  }
+}
+.section-2 .row .box-info-phone ul #caracteritics-1 {
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+  transform: translateY(100px);
+}
+.section-2 .row .box-info-phone ul #caracteritics-2 {
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+  transform: translateY(100px);
+}
+.section-2 .row .box-info-phone ul #caracteritics-3 {
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+  transform: translateY(100px);
+}
+.section-2 .row .box-info-phone ul #caracteritics-1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-2 .row .box-info-phone ul #caracteritics-2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-2 .row .box-info-phone ul #caracteritics-3.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 1024px) {
+  .section-2 .row .box-info-phone ul {
+    margin: 50px auto;
+  }
+}
+.section-2 .row .box-info-phone .container-imgs-phone-mobile {
+  display: none;
+  position: relative;
+  margin-top: 30px;
+}
+.section-2 .row .box-info-phone .container-imgs-phone-mobile .user-img {
+  max-width: 700px;
+  margin-left: auto;
+}
+.section-2 .row .box-info-phone .container-imgs-phone-mobile .phone-img {
+  position: absolute;
+  max-width: 230px;
+  top: -60px;
+}
+.section-2 .row .box-info-phone .container-imgs-phone-mobile .phone-img img {
+  transition: 0.7s ease-in-out all;
+  transform: translateX(-200px);
+}
+.section-2 .row .box-info-phone .container-imgs-phone-mobile .phone-img img.visible {
+  transform: translateX(0);
+}
+@media (max-width: 426px) {
+  .section-2 .row .box-info-phone .container-imgs-phone-mobile .user-img {
+    width: 95%;
+    margin-left: auto;
+  }
+  .section-2 .row .box-info-phone .container-imgs-phone-mobile .phone-img {
+    position: absolute;
+    width: 32%;
+    top: -32px;
+  }
+}
+@media (max-width: 768px) {
+  .section-2 .row .box-info-phone .info-phone-mobile {
+    text-align: right;
+    padding-right: 10px;
+  }
+  .section-2 .row .box-info-phone .info-phone-mobile h2 {
+    text-align: right;
+  }
+  .section-2 .row .box-info-phone .container-imgs-phone-mobile {
+    display: block;
+  }
+}
+@media (max-width: 426px) {
+  .section-2 .row .box-info-phone ul {
+    padding: 10px;
+    margin: 0px;
+  }
+  .section-2 .row .box-info-phone .info-phone-mobile h2 {
+    font-size: 25px;
+  }
+  .section-2 .row .box-info-phone .info-phone-mobile h3 {
+    font-size: 13px;
+  }
+}
+.section-2 .row .box-info-phone .info-phone-mobile {
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+}
+.section-2 .row .box-info-phone .info-phone-mobile.visible {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .section-2 .row {
+    display: block;
+    height: auto;
+  }
+  .section-2 .row .container-imgs-phone {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-2 {
+    margin: 50px auto;
+  }
+}
+@media (max-width: 426px) {
+  .section-2 {
+    background: url("./img/section-2/background-section-2-mobile.webp") no-repeat center center;
+    background-position-y: bottom;
+    margin: 25px auto;
+  }
+}
+.section-3 {
+  background: url("./img/section-3/background-section-3.webp") no-repeat center center;
+  margin: 100px 0;
+}
+.section-3 .row .box-info {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  padding: 30px 0;
+  opacity: 0;
+  transition: 0.9s ease-in-out all;
+}
+.section-3 .row .box-info h3 {
+  font-family: TelefonicaWeb-ExtraLight;
+  font-weight: 300;
+  font-size: 24px;
+}
+.section-3 .row .box-info h2 {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 400;
+  font-size: 46px;
+}
+.section-3 .row .box-info p {
+  font-family: TelefonicaWeb-Regular;
+  font-weight: 300;
+  margin: 20px 0;
+  text-align: center;
+}
+.section-3 .row .box-info .button {
+  display: inline-block;
+  padding: 13px 40px;
+  background-color: #019DF4;
+  border: 0;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-family: TelefonicaWeb-Regular;
+  font-size: 16px;
+}
+@media (max-width: 426px) {
+  .section-3 .row .box-info h3 {
+    font-size: 16px;
+  }
+  .section-3 .row .box-info h2 {
+    font-size: 30px;
+  }
+  .section-3 .row .box-info .button {
+    width: 150px;
+    height: 40px;
+  }
+}
+@media (max-width: 320px) {
+  .section-3 .row .box-info h3 {
+    font-size: 13px;
+  }
+  .section-3 .row .box-info h2 {
+    font-size: 25px;
+  }
+}
+.section-3 .row .box-info.visible {
+  opacity: 1;
+}
+.section-3 .row .img-section-3 {
+  line-height: 0;
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+  transform: translateX(-800px);
+}
+.section-3 .row .img-section-3 img:nth-child(2) {
+  display: none;
+}
+@media (max-width: 768px) {
+  .section-3 .row .img-section-3 img:first-child {
+    display: none;
+  }
+  .section-3 .row .img-section-3 img:nth-child(2) {
+    display: block;
+  }
+}
+.section-3 .row .img-section-3.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.section-4 {
+  margin: 100px auto;
+}
+.section-4 .row {
+  margin: auto;
+}
+.section-4 .row #section-4-box-info {
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+}
+.section-4 .row #section-4-box-info.visible {
+  opacity: 1;
+}
+.section-4 .row .box-info {
+  text-align: center;
+  padding: 30px 0;
+}
+.section-4 .row .box-info h3 {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 300;
+  font-size: 24px;
+}
+.section-4 .row .box-info h2 {
+  font-family: TelefonicaWeb-Bold;
+  font-size: 46px;
+}
+.section-4 .row .box-info p {
+  font-family: TelefonicaWeb-ExtraLight;
+  font-weight: 300;
+  margin: 20px 0;
+  text-align: justify;
+}
+@media (max-width: 426px) {
+  .section-4 .row .box-info h3 {
+    font-size: 16px;
+  }
+  .section-4 .row .box-info h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 426px) {
+  .section-4 .row .box-info {
+    padding: 10px;
+  }
+}
+.section-4 .row .nav-tabs {
+  padding-top: 20px;
+}
+.section-4 .row .nav-tabs ul {
+  display: flex;
+  justify-content: center;
+}
+.section-4 .row .nav-tabs ul li {
+  font-size: 18px;
+  border-bottom: 1px solid #86888C;
+  padding: 15px 30px;
+  color: #86888C;
+  cursor: pointer;
+}
+.section-4 .row .nav-tabs ul li a {
+  color: #86888C;
+}
+.section-4 .row .nav-tabs ul .active {
+  font-family: TelefonicaWeb-Bold;
+  border-bottom: 2px solid #1D1D1F;
+  color: #1D1D1F;
+}
+.section-4 .row .nav-tabs ul .active a {
+  color: #1D1D1F;
+}
+@media (max-width: 426px) {
+  .section-4 .row .nav-tabs ul li {
+    font-size: 12px;
+    padding: 15px 20px;
+  }
+}
+@media (max-width: 375px) {
+  .section-4 .row .nav-tabs ul li {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+@media (max-width: 426px) {
+  .section-4 .row .nav-phones {
+    width: fit-content;
+  }
+}
+.section-4 .row .container-card-phone {
+  margin-bottom: 50px;
+}
+.section-4 .row .container-card-phone .slider-phones {
+  max-width: 900px;
+  margin: auto;
+}
+.section-4 .row .container-card-phone .slider-phones .slide {
+  cursor: pointer;
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone {
+  padding: 0px 20px 20px 20px;
+  background: url("./img/section-4/card-phone-section-4.webp") no-repeat center center;
+  background-position-y: bottom;
+  border-radius: 16px;
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .header-card {
+  max-width: 176px;
+  margin: 20px auto;
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .header-card img {
+  height: 242px;
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .header-card .change-phone {
+  display: flex;
+  margin: 10px 0;
+  padding: 0;
+  justify-content: center;
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .header-card .change-phone li {
+  width: 10px;
+  height: 10px;
+  margin: auto 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .header-card .change-phone .color-phone-1 {
+  background: #F28D15;
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .header-card .change-phone .color-phone-2 {
+  background: #154C30;
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .header-card .change-phone .color-phone-3 {
+  background: #151C24;
+}
+@media (max-width: 426px) {
+  .section-4 .row .container-card-phone .slider-phones .slide .card-phone .header-card img {
+    height: 200px;
+  }
+}
+@media (max-width: 426px) {
+  .section-4 .row .container-card-phone .slider-phones .slide .card-phone .header-card {
+    max-width: 150px;
+  }
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .body-card {
+  text-align: center;
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .body-card h3 {
+  font-family: TelefonicaWeb-Bold;
+  font-size: 20px;
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .body-card p {
+  font-family: TelefonicaWeb-Light;
+}
+@media (max-width: 426px) {
+  .section-4 .row .container-card-phone .slider-phones .slide .card-phone .body-card h3 {
+    font-size: 16px;
+  }
+  .section-4 .row .container-card-phone .slider-phones .slide .card-phone .body-card p {
+    font-size: 12px;
+  }
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .footer-card {
+  text-align: center;
+  margin: 15px 0;
+}
+.section-4 .row .container-card-phone .slider-phones .slide .card-phone .footer-card .button {
+  width: 160px;
+  height: 45px;
+  background-color: #1D1D1F;
+  border: 0;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-family: TelefonicaWeb-Regular;
+  font-size: 16px;
+}
+@media (max-width: 426px) {
+  .section-4 .row .container-card-phone .slider-phones .slide .card-phone {
+    background: url("./img/section-4/card-phone-section-4-mobile.webp") no-repeat center center;
+    background-position-y: bottom;
+  }
+}
+.section-4 .row .container-card-phone .slider-phones .slide-1 {
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+}
+.section-4 .row .container-card-phone .slider-phones .slide-2 {
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+}
+.section-4 .row .container-card-phone .slider-phones .slide-3 {
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+}
+.section-4 .row .container-card-phone .slider-phones .slide-1.visible,
+.section-4 .row .container-card-phone .slider-phones .slide-2.visible,
+.section-4 .row .container-card-phone .slider-phones .slide-3.visible {
+  opacity: 1;
+}
+.section-4 .row .container-card-phone .slider-phones .slick-dots {
+  display: flex;
+  margin: 10px 0;
+  padding: 0;
+  justify-content: center;
+}
+.section-4 .row .container-card-phone .slider-phones .slick-dots li button {
+  width: 20px;
+  height: 20px;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.section-4 .row .container-card-phone .slider-phones .slick-dots li button:before {
+  font-size: 40px;
+  line-height: 20px;
+  content: "•";
+  color: #CED4D7;
+  -webkit-font-smoothing: antialiased;
+}
+.section-4 .row .container-card-phone .slider-phones .slick-dots .slick-active button:before {
+  opacity: 0.75;
+  color: #030B10;
+}
+.section-4 .row .container-equipos {
+  background-color: #FAFAFA;
+  border-radius: 16px;
+  border: 1px solid #D3D4D3;
+  max-width: 800px;
+  margin: auto;
+}
+.section-4 .row .container-equipos .row {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.section-4 .row .container-equipos .row .container-text {
+  display: flex;
+}
+.section-4 .row .container-equipos .row .container-text .text-box h3 {
+  font-family: TelefonicaWeb-Bold;
+  font-weight: 800;
+}
+.section-4 .row .container-equipos .row .container-text .img-section-4 {
+  padding-right: 10px;
+  max-width: 40px;
+}
+.section-4 .row .container-equipos .row .container-button .button {
+  width: 230px;
+  height: 45px;
+  background-color: #fff;
+  border: 1px solid #019DF4;
+  border-radius: 30px;
+  color: #019DF4;
+  cursor: pointer;
+  font-family: TelefonicaWeb-Regular;
+  font-size: 16px;
+}
+@media (max-width: 426px) {
+  .section-4 .row .container-equipos .row .container-text {
+    display: block;
+  }
+  .section-4 .row .container-equipos .row .container-text .img-section-4 {
+    display: none;
+  }
+  .section-4 .row .container-equipos .row .container-text .text-box {
+    text-align: center;
+  }
+  .section-4 .row .container-equipos .row .container-button {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+@media (max-width: 426px) {
+  .section-4 .row .container-equipos .row {
+    padding: 10px;
+    display: block;
+  }
+}
+@media (max-width: 426px) {
+  .section-4 .row .container-equipos {
+    margin: 10px;
+  }
+}
+
+.section-5 {
+  background: url("./img/section-5/background-section-5.webp") no-repeat center center;
+  margin: 100px 0;
+}
+.section-5 .row .box-info {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+  padding: 30px 0;
+  opacity: 0;
+  transition: 0.9s ease-in-out all;
+}
+.section-5 .row .box-info h3 {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 300;
+  font-size: 24px;
+}
+.section-5 .row .box-info h2 {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 400;
+  font-size: 46px;
+}
+.section-5 .row .box-info p {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 300;
+  margin: 20px 0;
+}
+.section-5 .row .box-info .button {
+  display: inline-block;
+  padding: 13px 40px;
+  background-color: #019DF4;
+  border: 0;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-family: TelefonicaWeb-Regular;
+  font-size: 16px;
+}
+@media (max-width: 426px) {
+  .section-5 .row .box-info h3 {
+    font-size: 16px;
+  }
+  .section-5 .row .box-info h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 320px) {
+  .section-5 .row .box-info h3 {
+    font-size: 13px;
+  }
+  .section-5 .row .box-info h2 {
+    font-size: 25px;
+  }
+}
+.section-5 .row .box-info.visible {
+  opacity: 1;
+}
+.section-5 .row .img-section-5 {
+  line-height: 0;
+  opacity: 0;
+  transition: 0.9s ease-in-out all;
+  transform: translateX(-800px);
+}
+.section-5 .row .img-section-5 img:nth-child(2) {
+  display: none;
+}
+.section-5 .row .img-section-5.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (max-width: 768px) {
+  .section-5 .row .img-section-5 img:first-child {
+    display: none;
+  }
+  .section-5 .row .img-section-5 img:nth-child(2) {
+    display: block;
+  }
+}
+
+@media (max-width: 426px) {
+  .section-5 {
+    background: url("./img/section-5/background-section-5-mobile.webp") no-repeat center center;
+    margin: 50px 0;
+  }
+}
+.section-6 {
+  margin: 100px auto;
+}
+.section-6 .row {
+  margin: auto;
+}
+.section-6 .row #section-6-box-info {
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+}
+.section-6 .row #section-6-box-info.visible {
+  opacity: 1;
+}
+.section-6 .row .box-info {
+  text-align: center;
+  padding: 30px 0;
+}
+.section-6 .row .box-info h3 {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 300;
+  font-size: 24px;
+}
+.section-6 .row .box-info h2 {
+  font-family: TelefonicaWeb-Bold;
+  font-size: 46px;
+}
+.section-6 .row .box-info p {
+  font-family: TelefonicaWeb-ExtraLight;
+  font-weight: 300;
+  margin: 20px 0;
+  text-align: justify;
+}
+@media (max-width: 426px) {
+  .section-6 .row .box-info h3 {
+    font-size: 16px;
+  }
+  .section-6 .row .box-info h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 426px) {
+  .section-6 .row .box-info {
+    padding: 10px;
+  }
+}
+.section-6 .row .nav-tabs {
+  padding: 20px 0;
+}
+.section-6 .row .nav-tabs ul {
+  display: flex;
+  justify-content: center;
+}
+.section-6 .row .nav-tabs ul li {
+  font-size: 18px;
+  border-bottom: 1px solid #86888C;
+  padding: 15px 30px;
+  color: #86888C;
+  cursor: pointer;
+}
+.section-6 .row .nav-tabs ul .active {
+  font-family: TelefonicaWeb-Bold;
+  border-bottom: 2px solid #1D1D1F;
+  color: #1D1D1F;
+}
+@media (max-width: 426px) {
+  .section-6 .row .nav-tabs ul li {
+    font-size: 12px;
+    padding: 15px 20px;
+  }
+}
+@media (max-width: 375px) {
+  .section-6 .row .nav-tabs ul li {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+.section-6 .row .container-card-phone .slider-accessories {
+  max-width: 1200px;
+  margin: auto;
+}
+.section-6 .row .container-card-phone .slider-accessories .slide {
+  margin-right: 20px;
+}
+.section-6 .row .container-card-phone .slider-accessories .slide .card-phone {
+  padding: 10px;
+  background-color: #FAFAFA;
+  border: 1px solid #D3D4D3;
+  border-radius: 16px;
+}
+.section-6 .row .container-card-phone .slider-accessories .slide .card-phone .header-card {
+  width: 190px;
+  height: 190px;
+  margin: 20px auto;
+}
+.section-6 .row .container-card-phone .slider-accessories .slide .card-phone .body-card {
+  padding: 0px 10px;
+  text-align: center;
+}
+.section-6 .row .container-card-phone .slider-accessories .slide .card-phone .body-card h3 {
+  font-family: TelefonicaWeb-Bold;
+  font-size: 20px;
+}
+.section-6 .row .container-card-phone .slider-accessories .slide .card-phone .body-card p {
+  font-family: TelefonicaWeb-Light;
+}
+@media (max-width: 426px) {
+  .section-6 .row .container-card-phone .slider-accessories .slide .card-phone .body-card p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 375px) {
+  .section-6 .row .container-card-phone .slider-accessories .slide .card-phone .body-card p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .section-6 .row .container-card-phone .slider-accessories .slide .card-phone .body-card p {
+    font-size: 12px;
+  }
+}
+.section-6 .row .container-card-phone .slider-accessories .slide .card-phone .footer-card {
+  text-align: center;
+  margin: 15px 0;
+}
+.section-6 .row .container-card-phone .slider-accessories .slide .card-phone .footer-card .button {
+  width: 160px;
+  height: 45px;
+  background-color: #1D1D1F;
+  border: 0;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-family: TelefonicaWeb-Regular;
+  font-size: 16px;
+}
+@media (max-width: 426px) {
+  .section-6 .row .container-card-phone .slider-accessories .slide .card-phone .header-card {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 375px) {
+  .section-6 .row .container-card-phone .slider-accessories .slide .card-phone .header-card {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 320px) {
+  .section-6 .row .container-card-phone .slider-accessories .slide .card-phone .header-card {
+    width: 100px;
+    height: 100px;
+  }
+}
+.section-6 .row .container-card-phone .slider-accessories .slide-1 {
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+}
+.section-6 .row .container-card-phone .slider-accessories .slide-2 {
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+}
+.section-6 .row .container-card-phone .slider-accessories .slide-3 {
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+}
+.section-6 .row .container-card-phone .slider-accessories .slide-4 {
+  opacity: 0;
+  transition: 0.2s ease-in-out all;
+}
+.section-6 .row .container-card-phone .slider-accessories .slide-1.visible,
+.section-6 .row .container-card-phone .slider-accessories .slide-2.visible,
+.section-6 .row .container-card-phone .slider-accessories .slide-3.visible,
+.section-6 .row .container-card-phone .slider-accessories .slide-4.visible {
+  opacity: 1;
+}
+.section-6 .row .container-card-phone .slider-accessories .slick-dots {
+  display: flex;
+  margin: 10px 0;
+  padding: 0;
+  justify-content: center;
+}
+.section-6 .row .container-card-phone .slider-accessories .slick-dots li button {
+  width: 20px;
+  height: 20px;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.section-6 .row .container-card-phone .slider-accessories .slick-dots li button:before {
+  font-size: 40px;
+  line-height: 20px;
+  content: "•";
+  color: #CED4D7;
+  -webkit-font-smoothing: antialiased;
+}
+.section-6 .row .container-card-phone .slider-accessories .slick-dots .slick-active button:before {
+  opacity: 0.75;
+  color: #030B10;
+}
+.section-6 .row .container-equipos {
+  background-color: #FAFAFA;
+  border-radius: 16px;
+  border: 1px solid #D3D4D3;
+  max-width: 800px;
+  margin: 40px auto;
+}
+.section-6 .row .container-equipos .row {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.section-6 .row .container-equipos .row .container-text {
+  display: flex;
+}
+.section-6 .row .container-equipos .row .container-text .text-box h3 {
+  font-family: TelefonicaWeb-Bold;
+}
+.section-6 .row .container-equipos .row .container-text .img-section-6 {
+  padding-right: 10px;
+  max-width: 40px;
+}
+.section-6 .row .container-equipos .row .container-button .button {
+  width: 230px;
+  height: 45px;
+  background-color: #fff;
+  border: 1px solid #019DF4;
+  border-radius: 30px;
+  color: #019DF4;
+  cursor: pointer;
+  font-family: TelefonicaWeb-Regular;
+  font-size: 16px;
+}
+@media (max-width: 426px) {
+  .section-6 .row .container-equipos .row .container-text {
+    display: block;
+  }
+  .section-6 .row .container-equipos .row .container-text .img-section-6 {
+    display: none;
+  }
+  .section-6 .row .container-equipos .row .container-text .text-box {
+    text-align: center;
+  }
+  .section-6 .row .container-equipos .row .container-button {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+@media (max-width: 426px) {
+  .section-6 .row .container-equipos .row {
+    padding: 10px;
+    display: block;
+  }
+}
+@media (max-width: 426px) {
+  .section-6 .row .container-equipos {
+    margin: 10px;
+  }
+}
+
+.section-7 {
+  background: #FAFAFA;
+}
+.section-7 .container-section-7 {
+  margin: 100px auto;
+}
+.section-7 .container-section-7 .row {
+  display: flex;
+  justify-content: end;
+  height: 400px;
+}
+.section-7 .container-section-7 .row .box-info {
+  max-width: 800px;
+  width: 80%;
+  margin: auto;
+  padding: 30px 30px 0px 30px;
+}
+.section-7 .container-section-7 .row .box-info h3 {
+  font-family: TelefonicaWeb-ExtraLight;
+  font-size: 24px;
+}
+.section-7 .container-section-7 .row .box-info h2 {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 400;
+  font-size: 46px;
+}
+.section-7 .container-section-7 .row .box-info p {
+  margin: 20px 0;
+}
+.section-7 .container-section-7 .row .box-info .caracteristics-mobile {
+  display: none;
+}
+@media (max-width: 426px) {
+  .section-7 .container-section-7 .row .box-info .caracteristics-mobile {
+    display: block;
+  }
+  .section-7 .container-section-7 .row .box-info .caracteristics-mobile li .text-box-phone p {
+    margin: 0;
+  }
+}
+.section-7 .container-section-7 .row .box-info .button {
+  display: inline-block;
+  padding: 13px 40px;
+  background-color: #019DF4;
+  border: 0;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-family: TelefonicaWeb-Regular;
+  font-size: 16px;
+}
+@media (max-width: 426px) {
+  .section-7 .container-section-7 .row .box-info h3 {
+    font-size: 16px;
+  }
+  .section-7 .container-section-7 .row .box-info h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 375px) {
+  .section-7 .container-section-7 .row .box-info h3 {
+    font-size: 13px;
+  }
+  .section-7 .container-section-7 .row .box-info h2 {
+    font-size: 23px;
+  }
+}
+@media (max-width: 426px) {
+  .section-7 .container-section-7 .row .caracteristics-desktop {
+    display: none;
+  }
+}
+.section-7 .container-section-7 .row ul {
+  margin: auto;
+}
+.section-7 .container-section-7 .row ul li {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 50px;
+}
+.section-7 .container-section-7 .row ul li .text-box-phone {
+  width: 345px;
+  margin-right: 35px;
+  text-align: end;
+}
+.section-7 .container-section-7 .row ul li .text-box-phone h3 {
+  font-family: TelefonicaWeb-Regular;
+  font-weight: 300;
+  font-size: 24px;
+}
+@media (max-width: 426px) {
+  .section-7 .container-section-7 .row ul li .text-box-phone h3 {
+    font-size: 16px;
+  }
+  .section-7 .container-section-7 .row ul li .text-box-phone p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .section-7 .container-section-7 .row ul li .text-box-phone {
+    margin-right: 20px;
+  }
+}
+.section-7 .container-section-7 .row ul li img {
+  max-width: 50px;
+}
+.section-7 .container-section-7 .row ul li:nth-child(3) {
+  margin-bottom: 0;
+}
+@media (max-width: 1024px) {
+  .section-7 .container-section-7 .row ul li {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .section-7 .container-section-7 .row ul li {
+    margin-bottom: 50px;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 426px) {
+  .section-7 .container-section-7 .row ul li {
+    margin-bottom: 30px;
+  }
+}
+.section-7 .container-section-7 .row ul #caracteritics-1 {
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+  transform: translateY(100px);
+}
+.section-7 .container-section-7 .row ul #caracteritics-2 {
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+  transform: translateY(100px);
+}
+.section-7 .container-section-7 .row ul #caracteritics-3 {
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+  transform: translateY(100px);
+}
+.section-7 .container-section-7 .row ul #caracteritics-1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-7 .container-section-7 .row ul #caracteritics-2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.section-7 .container-section-7 .row ul #caracteritics-3.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 1024px) {
+  .section-7 .container-section-7 .row ul {
+    margin: 50px auto;
+  }
+}
+@media (max-width: 1024px) {
+  .section-7 .container-section-7 .row .box-info {
+    width: 66%;
+  }
+}
+@media (max-width: 768px) {
+  .section-7 .container-section-7 .row .box-info {
+    width: auto;
+    padding: 30px 0;
+  }
+  .section-7 .container-section-7 .row .box-info .container {
+    padding: 0px 30px;
+  }
+}
+@media (max-width: 768px) and (max-width: 426px) {
+  .section-7 .container-section-7 .row .box-info .container {
+    padding: 0px 10px;
+  }
+}
+@media (max-width: 1024px) {
+  .section-7 .container-section-7 .row {
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .section-7 .container-section-7 .row {
+    display: block;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .section-7 .container-section-7 {
+    height: auto;
+  }
+}
+
+.section-8 {
+  background: url("./img/section-8/background-section-8.webp") no-repeat center center;
+  margin: 100px 0;
+}
+.section-8 .row {
+  margin: auto;
+  padding: 50px 0;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: 0.9s ease-in-out all;
+}
+.section-8 .row .img-logo {
+  max-width: 157px;
+  margin: auto;
+  padding: 20px 0;
+}
+.section-8 .row h3 {
+  font-weight: 300;
+  font-size: 24px;
+}
+.section-8 .row h2 {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 400;
+  font-size: 46px;
+}
+.section-8 .row .form-movistar {
+  display: flex;
+  width: 600px;
+  padding: 20px 0;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.section-8 .row .form-movistar .container-form {
+  border-bottom: 1px solid #fff;
+}
+.section-8 .row .form-movistar .container-form label {
+  font-family: TelefonicaWeb-Bold;
+}
+.section-8 .row .form-movistar .container-form .text {
+  color: #fff;
+  border: 0;
+  background: transparent;
+  outline: none;
+}
+.section-8 .row .form-movistar .button {
+  width: 190px;
+  height: 45px;
+  background-color: #019DF4;
+  border: 0;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-family: TelefonicaWeb-Regular;
+  font-size: 16px;
+}
+@media (max-width: 426px) {
+  .section-8 .row .form-movistar .container-form {
+    width: 226px;
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 426px) {
+  .section-8 .row .img-logo {
+    max-width: 100px;
+  }
+  .section-8 .row h2 {
+    font-size: 24px;
+  }
+  .section-8 .row h3 {
+    font-family: TelefonicaWeb-ExtraLight;
+    font-size: 16px;
+  }
+  .section-8 .row .form-movistar {
+    display: block;
+    width: 100%;
+  }
+}
+.section-8 .row.visible {
+  opacity: 1;
+}
+@media (max-width: 426px) {
+  .section-8 .row {
+    padding: 30px 0;
+  }
+}
+
+.section-9 {
+  background: #F5F5F5;
+  margin: 100px 0;
+}
+.section-9 .row {
+  padding: 50px 0;
+}
+.section-9 .row .box-info {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+.section-9 .row .box-info h2 {
+  font-family: TelefonicaWeb-Bold;
+  font-size: 46px;
+}
+@media (max-width: 426px) {
+  .section-9 .row .box-info h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 426px) {
+  .section-9 .row .box-info {
+    padding: 0px 10px;
+  }
+}
+.section-9 .row .container-imgs {
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 40px;
+}
+.section-9 .row .container-imgs ul li {
+  margin-right: 20px;
+}
+.section-9 .row .container-imgs ul li a {
+  position: relative;
+}
+.section-9 .row .container-imgs ul li a .ico-section-9 {
+  position: absolute;
+  max-width: 50px;
+  right: 0;
+  top: 15px;
+}
+.section-9 .row .container-imgs ul li a .box-text {
+  position: absolute;
+  text-align: center;
+  bottom: 15px;
+  right: 0;
+  left: 0;
+  color: #fff;
+}
+.section-9 .row .container-imgs ul li a .box-text h3 {
+  font-family: TelefonicaWeb-ExtraLight;
+  font-weight: 300;
+  font-size: 21px;
+}
+.section-9 .row .container-imgs ul li a .box-text .offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+.section-9 .row .container-imgs ul li a .box-text .offer p {
+  padding: 0px 10px;
+}
+.section-9 .row .container-imgs ul li a .box-text .offer .icon-left-arrow {
+  background: url(./img/section-9/right-arrow.webp) no-repeat center center;
+  width: 14px;
+  height: 14px;
+}
+@media (max-width: 320px) {
+  .section-9 .row .container-imgs ul li a .box-text .offer p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .section-9 .row .container-imgs ul li a .box-text h3 {
+    font-size: 19px;
+  }
+}
+@media (max-width: 768px) {
+  .section-9 .row .container-imgs ul li a .ico-section-9 {
+    width: 50%;
+  }
+  .section-9 .row .container-imgs ul li a .box-text {
+    bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .section-9 .row .container-imgs ul li a .box-text {
+    bottom: 25px;
+  }
+}
+.section-9 .row .container-imgs ul .slick-dots {
+  display: flex;
+  margin: 10px 0;
+  padding: 0;
+  justify-content: center;
+}
+.section-9 .row .container-imgs ul .slick-dots li {
+  margin: 0;
+}
+.section-9 .row .container-imgs ul .slick-dots li button {
+  width: 20px;
+  height: 20px;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.section-9 .row .container-imgs ul .slick-dots li button:before {
+  font-size: 40px;
+  line-height: 20px;
+  content: "•";
+  color: #CED4D7;
+  -webkit-font-smoothing: antialiased;
+}
+.section-9 .row .container-imgs ul .slick-dots .slick-active button:before {
+  opacity: 0.75;
+  color: #030B10;
+}
+
+.section-10 {
+  background: url("./img/section-10/background-section-10.webp") no-repeat center center;
+  margin: 100px 0;
+}
+.section-10 .row {
+  display: flex;
+  margin: 0px 60px;
+  padding: 50px 0;
+  color: #fff;
+  justify-content: space-evenly;
+}
+.section-10 .row .box-info .img-logo {
+  max-width: 157px;
+  padding: 20px 0;
+}
+.section-10 .row .box-info .text {
+  margin-bottom: 50px;
+}
+.section-10 .row .box-info .text h2 {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 400;
+  font-size: 46px;
+}
+.section-10 .row .box-info .text h3 {
+  font-family: TelefonicaWeb-Regular;
+  font-weight: 300;
+  font-size: 24px;
+}
+@media (max-width: 426px) {
+  .section-10 .row .box-info .text h2 {
+    font-size: 30px;
+  }
+  .section-10 .row .box-info .text h3 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 320px) {
+  .section-10 .row .box-info .text h2 {
+    font-size: 30px;
+  }
+  .section-10 .row .box-info .text h3 {
+    font-size: 16px;
+  }
+}
+.section-10 .row .box-info .button {
+  display: inline-block;
+  padding: 13px 40px;
+  background-color: #019DF4;
+  border: 0;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-family: TelefonicaWeb-Regular;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  .section-10 .row .box-info .img-logo {
+    margin: auto;
+  }
+}
+@media (max-width: 426px) {
+  .section-10 .row .box-info .img-logo {
+    max-width: 100px;
+  }
+}
+.section-10 .row .container-imgs {
+  display: flex;
+}
+.section-10 .row .container-imgs img:first-child {
+  margin-right: 25px;
+}
+@media (max-width: 1024px) {
+  .section-10 .row .box-info {
+    max-width: 600px;
+  }
+  .section-10 .row .container-imgs {
+    height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .section-10 .row .box-info {
+    max-width: fit-content;
+    text-align: center;
+  }
+  .section-10 .row .container-imgs {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .section-10 .row {
+    display: block;
+  }
+}
+@media (max-width: 426px) {
+  .section-10 .row {
+    margin: 0px 10px;
+  }
+}
+
+.section-11 {
+  margin: 100px 0;
+}
+.section-11 .row {
+  padding: 50px 0;
+}
+.section-11 .row .box-info {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+.section-11 .row .box-info h3 {
+  font-family: TelefonicaWeb-Light;
+  font-weight: 300;
+  font-size: 36px;
+}
+@media (max-width: 426px) {
+  .section-11 .row .box-info h3 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 320px) {
+  .section-11 .row .box-info h3 {
+    font-size: 20px;
+  }
+}
+.section-11 .row .container-imgs {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 0px;
+}
+.section-11 .row .container-imgs ul li {
+  margin-right: 20px;
+  background: #FAFAFA;
+  border-radius: 15px;
+}
+.section-11 .row .container-imgs ul li a {
+  padding: 20px;
+  margin: auto;
+  max-width: fit-content;
+  height: 121px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 426px) {
+  .section-11 .row .container-imgs ul li a {
+    height: 70px;
+  }
+}
+@media (max-width: 375px) {
+  .section-11 .row .container-imgs ul li a {
+    height: 70px;
+  }
+}
+@media (max-width: 320px) {
+  .section-11 .row .container-imgs ul li a {
+    height: 45px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

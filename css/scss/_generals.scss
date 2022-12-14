@@ -1,0 +1,21 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 50px);
+}
+
+body {
+    font-family: $telefonica-regular;
+    font-size: 16px;
+    color: $black;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+strong{
+    font-family: $telefonica-bold;
+    font-weight: 800;
+}
+
